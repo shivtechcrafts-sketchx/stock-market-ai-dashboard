@@ -20,74 +20,79 @@
   <img src="https://img.shields.io/badge/Stocks-10%2B-orange?style=flat-square"/>
 </p>
 
+<br/>
+
+> **A professional-grade, real-time AI stock trading dashboard built with Streamlit and Yahoo Finance API.**
+> Live price monitoring · AI-powered predictions · Full technical analysis · Paper trading simulator — all in one terminal.
+
 </div>
 
 ---
 
 🎥 Live Demo: AI predicting stock trends in real-time: https://drive.google.com/file/d/1AJryxzrN2oh1xKYd3mWqTMw-zzDqQTSz/view?usp=drivesdk
+
 ---
 
 ## 🌟 Project Overview
 
-**LiveStockForecast** ek professional-grade, real-time AI stock trading dashboard hai jo **Streamlit** aur **Yahoo Finance API** ke saath bana hai. Yeh dashboard live price monitoring, AI-powered price predictions, technical analysis, aur paper trading simulator sab kuch ek jagah provide karta hai — bilkul ek pro trading terminal ki tarah.
+**LiveStockForecast** is a real-time, AI-driven stock market dashboard that refreshes every **5 seconds** to deliver live price data, dynamic technical indicators, and multi-model price predictions — designed to look and feel like a professional trading terminal.
 
-> **Yeh kaam kya karta hai?**  
-> Har **5 seconds** mein live stock prices fetch karta hai, real-time technical indicators calculate karta hai, aur **multiple AI models** combine karke next price prediction deta hai. Saath mein volume pressure, RSI momentum, ATR volatility aur MACD trend bhi dikhata hai.
+The dashboard fetches live stock prices via the **Yahoo Finance API**, computes a suite of technical indicators in real time, and combines **multiple prediction models** (Linear Regression, Moving Average, RSI Momentum, ATR Volatility, MACD Trend, and Volume Pressure) into a single unified AI forecast with a confidence score.
 
 ---
 
 ## ✨ Key Features
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│  📡 LIVE PRICE      →  Real-time price via yFinance API     │
-│  🔮 AI PREDICTIONS  →  LR + MA + Volume + RSI + ATR Model  │
-│  📊 TECHNICAL       →  RSI, MACD, BB, VWAP, EMA, SMA       │
-│  🕯️  CANDLESTICK    →  Interactive TradingView-style chart  │
-│  📰 NEWS FEED       →  Latest stock news auto-fetched       │
-│  💼 PORTFOLIO       →  Real-time P&L tracker                │
-│  🎯 PAPER TRADING   →  Virtual $1,00,000 simulator          │
-│  📐 SUPPORT/RESIST  →  Auto S/R level detection             │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────┐
+│  📡 LIVE PRICE       →  Real-time price fetched via yFinance    │
+│  🔮 AI PREDICTIONS   →  LR + MA + Volume + RSI + ATR Model     │
+│  📊 TECHNICAL TOOLS  →  RSI, MACD, BB, VWAP, EMA50/200, SMA    │
+│  🕯️  CANDLESTICK     →  Interactive TradingView-style chart     │
+│  📐 SUPPORT/RESIST   →  Auto S/R level detection & annotation   │
+│  📰 NEWS FEED        →  Latest stock news auto-fetched          │
+│  💼 PORTFOLIO        →  Real-time P&L tracker for holdings      │
+│  🎯 PAPER TRADING    →  Virtual $100,000 trade simulator        │
+└─────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
 ## 🤖 AI Prediction Engine
 
-Yeh dashboard ek **custom multi-factor prediction model** use karta hai jo sirf static Linear Regression nahi hai — har refresh pe genuinely alag value aati hai:
+This dashboard uses a **custom multi-factor prediction model** that generates genuinely different values on every refresh cycle — not just a static linear projection.
 
 | Model Component | Description |
 |---|---|
-| 📐 **Linear Regression** | Historical price trend se slope-based projection |
-| 📊 **MA + Volume Pressure** | Moving average + above-average volume multiplier |
-| ⚡ **RSI Momentum Bias** | Overbought/oversold zones se direction adjustment |
-| 🌊 **ATR Volatility** | Average True Range se prediction spread decide hoti hai |
-| 📈 **MACD Direction** | EMA crossover se trend strength weighting |
-| 🎲 **Microstructure Noise** | `time.time()` seeded noise — real bid/ask fluctuation simulate karta hai |
-| 🤖 **AI Combined** | 35% LR + 35% MA + 15% Momentum + 15% MACD blend |
+| 📐 **Linear Regression** | Slope-based price projection from historical close data |
+| 📊 **MA + Volume Pressure** | Moving average weighted by above-average volume ratio |
+| ⚡ **RSI Momentum Bias** | Directional adjustment based on overbought/oversold zones |
+| 🌊 **ATR Volatility** | Average True Range determines prediction spread width |
+| 📈 **MACD Direction** | EMA crossover signal used for trend strength weighting |
+| 🎲 **Market Microstructure** | `time.time()` seeded noise simulating live bid/ask fluctuation |
+| 🤖 **AI Combined Score** | 35% LR + 35% MA + 15% Momentum + 15% MACD weighted blend |
 
-> **Confidence Score** (45%–95%) bhi dynamically calculate hoti hai based on recent candle direction consistency aur volume ratio.
+The **Confidence Score** (range: 45%–95%) is dynamically computed based on recent candle direction consistency and real-time volume ratio, giving you a clear sense of how reliable each prediction cycle is.
 
 ---
 
 ## 📸 Dashboard Tabs
 
-| Tab | Description |
+| Tab | What It Shows |
 |---|---|
-| 🕯️ Candlestick | Full OHLC chart with BB, EMA50/200, VWAP, S/R levels, prediction arrows |
-| 📉 Line Plot | Price line with comparison mode (upto 3 stocks simultaneously) |
-| 📊 MACD | MACD histogram + signal line chart |
-| 📦 Volume | Volume bars with 20-period moving average |
-| 📰 News | Latest news articles for selected stock |
-| 💼 Portfolio | Live P&L for tracked portfolio holdings |
-| 🎯 Trade Tracker | Paper trading — buy/sell with stop loss & target |
+| 🕯️ **Candlestick** | Full OHLC chart with Bollinger Bands, EMA50/200, VWAP, S/R levels, and live prediction arrows |
+| 📉 **Line Plot** | Price line chart with multi-stock comparison mode (up to 3 stocks simultaneously, normalized) |
+| 📊 **MACD** | MACD line, signal line, and histogram with zero-line reference |
+| 📦 **Volume** | Color-coded volume bars with 20-period moving average overlay |
+| 📰 **News Feed** | Latest news articles auto-fetched for the selected stock |
+| 💼 **Portfolio** | Live P&L tracking for your configured portfolio holdings |
+| 🎯 **Trade Tracker** | Full paper trading simulator with stop loss, target price, and balance management |
 
 ---
 
 ## 🚀 Quick Start
 
-### 1. Clone the repo
+### 1. Clone the repository
 ```bash
 git clone https://github.com/yourusername/live-stock-forecast.git
 cd live-stock-forecast
@@ -103,7 +108,7 @@ pip install -r requirements.txt
 streamlit run app.py
 ```
 
-> 🌐 Opens at `http://localhost:8501`
+> 🌐 Dashboard opens at `http://localhost:8501`
 
 ---
 
@@ -124,41 +129,42 @@ plotly>=5.18.0
 ```
 live-stock-forecast/
 │
-├── app.py              # 🚀 Main Streamlit dashboard
-├── train.py            # 🧠 Model training utilities
+├── app.py              # 🚀 Main Streamlit dashboard application
+├── train.py            # 🧠 Model training and utility functions
 ├── model/              # 📦 Saved model artifacts
-├── requirements.txt    # 📋 Python dependencies
-└── README.md           # 📖 You are here
+├── requirements.txt    # 📋 Python package dependencies
+└── README.md           # 📖 Project documentation
 ```
 
 ---
 
-## ⚙️ Configuration (Sidebar)
+## ⚙️ Sidebar Configuration
 
 | Setting | Range | Default | Effect |
 |---|---|---|---|
-| SMA Window | 5–50 | 10 | Simple Moving Average period |
-| EMA Fast | 5–30 | 12 | Fast EMA for MACD |
-| EMA Slow | 20–100 | 26 | Slow EMA for MACD |
-| BB Window | 10–50 | 20 | Bollinger Band period |
-| BB Std Dev | 1.0–3.0 | 2.0 | Band width multiplier |
-| Refresh Rate | 5/10/30/60s | 5s | Live data refresh interval |
+| SMA Window | 5 – 50 | 10 | Simple Moving Average period |
+| EMA Fast | 5 – 30 | 12 | Fast EMA span used in MACD |
+| EMA Slow | 20 – 100 | 26 | Slow EMA span used in MACD |
+| BB Window | 10 – 50 | 20 | Bollinger Band rolling period |
+| BB Std Dev | 1.0 – 3.0 | 2.0 | Band width multiplier |
+| Refresh Rate | 5 / 10 / 30 / 60s | 5s | Live data auto-refresh interval |
 
 ---
 
 ## 📊 Supported Stocks
 
 ```
-AAPL  GOOGL  MSFT  TSLA  AMZN
-META  NVDA   NFLX  AMD   INTC
+AAPL   GOOGL   MSFT   TSLA   AMZN
+META   NVDA    NFLX   AMD    INTC
 ```
-> Compare mode mein ek saath 3 stocks simultaneously dekh sakte hain (normalized).
+
+> Use **Compare Mode** to overlay up to 3 stocks simultaneously on the Line Plot tab (prices normalized to a common base for fair comparison).
 
 ---
 
 ## ⚠️ Disclaimer
 
-> Yeh dashboard **educational aur learning purposes** ke liye hai. Isme jo predictions aur signals hain woh **financial advice nahi hain**. Real money trading mein use karne se pehle apne financial advisor se consult karein. Market investments subject to market risk hain.
+> This dashboard is built for **educational and learning purposes only**. The predictions, signals, and indicators shown here do **not** constitute financial advice. Please consult a qualified financial advisor before making any real investment decisions. All market investments are subject to market risk.
 
 ---
 
@@ -184,6 +190,5 @@ META  NVDA   NFLX  AMD   INTC
   </a>
 
 </div>
-
-
+---
 
