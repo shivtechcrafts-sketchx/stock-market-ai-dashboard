@@ -167,28 +167,20 @@ META   NVDA    NFLX   AMD    INTC
 > This dashboard is built for **educational and learning purposes only**. The predictions, signals, and indicators shown here do **not** constitute financial advice. Please consult a qualified financial advisor before making any real investment decisions. All market investments are subject to market risk.
 
 ---
+<h2 align="center">👨‍💻 Author</h2>
 
-<div style="text-align:center; padding:20px; border-radius:15px; background:linear-gradient(135deg,#0f2027,#203a43,#2c5364); color:white;">
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?size=25&duration=3000&color=00F7FF&center=true&vCenter=true&width=500&lines=Hi+I'm+Shiv+Kumavat;AI+%7C+ML+Developer;Building+Real+World+Projects+🚀" />
+</p>
 
-  <h1>👨‍💻 Shiv Kumavat</h1>
-
-  <p style="font-size:18px;">
-    🚀 AI & ML Developer <br>
-    📊 Building Smart Dashboards & Predictive Systems
-  </p>
-
-  <marquee behavior="scroll" direction="left" scrollamount="6">
-    🔥 AI • Machine Learning • Stock Prediction • Real-Time Systems 🔥
-  </marquee>
-
+<p align="center">
+  💡 Passionate about AI, Machine Learning & Real-time Systems  
   <br><br>
+  🚀 Creator of <b>AI Stock Trading Dashboard</b>  
+</p>
 
-  <a href="https://github.com/shivtechcrafts-sketch" style="text-decoration:none;">
-    <button style="padding:10px 20px; border:none; border-radius:10px; background:#00c6ff; color:black; font-weight:bold;">
-      Visit GitHub
-    </button>
+<p align="center">
+  <a href="https://github.com/shivtechcrafts-sketch">
+    <img src="https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github">
   </a>
-
-</div>
----
-
+</p>
