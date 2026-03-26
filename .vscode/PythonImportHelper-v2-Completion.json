@@ -1,0 +1,283 @@
+[
+    {
+        "label": "streamlit",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "streamlit",
+        "description": "streamlit",
+        "detail": "streamlit",
+        "documentation": {}
+    },
+    {
+        "label": "yfinance",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "yfinance",
+        "description": "yfinance",
+        "detail": "yfinance",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "plotly.graph_objects",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "plotly.graph_objects",
+        "description": "plotly.graph_objects",
+        "detail": "plotly.graph_objects",
+        "documentation": {}
+    },
+    {
+        "label": "make_subplots",
+        "importPath": "plotly.subplots",
+        "description": "plotly.subplots",
+        "isExtraImport": true,
+        "detail": "plotly.subplots",
+        "documentation": {}
+    },
+    {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Sequential",
+        "importPath": "tensorflow.keras.models",
+        "description": "tensorflow.keras.models",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.models",
+        "documentation": {}
+    },
+    {
+        "label": "LSTM",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "Dense",
+        "importPath": "tensorflow.keras.layers",
+        "description": "tensorflow.keras.layers",
+        "isExtraImport": true,
+        "detail": "tensorflow.keras.layers",
+        "documentation": {}
+    },
+    {
+        "label": "MinMaxScaler",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "compute_rsi",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def compute_rsi(s, p=14):\n    d = s.diff()\n    g = d.clip(lower=0).rolling(p).mean()\n    l = (-d.clip(upper=0)).rolling(p).mean()\n    return 100 - 100 / (1 + g / l.replace(0, np.nan))\ndef compute_macd(s, fast=12, slow=26, signal=9):\n    ef = s.ewm(span=fast,   adjust=False).mean()\n    es = s.ewm(span=slow,   adjust=False).mean()\n    m  = ef - es\n    sg = m.ewm(span=signal, adjust=False).mean()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "compute_macd",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def compute_macd(s, fast=12, slow=26, signal=9):\n    ef = s.ewm(span=fast,   adjust=False).mean()\n    es = s.ewm(span=slow,   adjust=False).mean()\n    m  = ef - es\n    sg = m.ewm(span=signal, adjust=False).mean()\n    return m, sg, m - sg\ndef compute_bb(s, window=20, n_std=2):\n    mid = s.rolling(window).mean()\n    std = s.rolling(window).std()\n    return mid + n_std*std, mid, mid - n_std*std",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "compute_bb",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def compute_bb(s, window=20, n_std=2):\n    mid = s.rolling(window).mean()\n    std = s.rolling(window).std()\n    return mid + n_std*std, mid, mid - n_std*std\ndef compute_vwap(df):\n    tp = (df[\"High\"] + df[\"Low\"] + df[\"Close\"]) / 3\n    return (tp * df[\"Volume\"]).cumsum() / df[\"Volume\"].cumsum()\ndef compute_atr(df, period=14):\n    \"\"\"Average True Range - measures volatility\"\"\"\n    high = df[\"High\"]",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "compute_vwap",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def compute_vwap(df):\n    tp = (df[\"High\"] + df[\"Low\"] + df[\"Close\"]) / 3\n    return (tp * df[\"Volume\"]).cumsum() / df[\"Volume\"].cumsum()\ndef compute_atr(df, period=14):\n    \"\"\"Average True Range - measures volatility\"\"\"\n    high = df[\"High\"]\n    low  = df[\"Low\"]\n    close_prev = df[\"Close\"].shift(1)\n    tr = pd.concat([\n        high - low,",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "compute_atr",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def compute_atr(df, period=14):\n    \"\"\"Average True Range - measures volatility\"\"\"\n    high = df[\"High\"]\n    low  = df[\"Low\"]\n    close_prev = df[\"Close\"].shift(1)\n    tr = pd.concat([\n        high - low,\n        (high - close_prev).abs(),\n        (low  - close_prev).abs()\n    ], axis=1).max(axis=1)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "compute_momentum",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def compute_momentum(s, period=10):\n    \"\"\"Rate of Change momentum\"\"\"\n    return (s - s.shift(period)) / s.shift(period) * 100\ndef predict_all_live(df, live_price):\n    \"\"\"\n    LIVE prediction engine:\n    - Uses intraday 1m/2m data for real-time microstructure\n    - Combines: Linear Regression + EMA crossover + RSI momentum + ATR volatility + Volume pressure\n    - Adds live-price-based noise for realistic fluctuation\n    \"\"\"",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "predict_all_live",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def predict_all_live(df, live_price):\n    \"\"\"\n    LIVE prediction engine:\n    - Uses intraday 1m/2m data for real-time microstructure\n    - Combines: Linear Regression + EMA crossover + RSI momentum + ATR volatility + Volume pressure\n    - Adds live-price-based noise for realistic fluctuation\n    \"\"\"\n    close = df[\"Close\"].values\n    n     = len(close)\n    # 1. Linear Regression Prediction",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "get_sr_levels",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def get_sr_levels(df, window=10, n=3):\n    h = df[\"High\"].rolling(window, center=True).max()\n    l = df[\"Low\"].rolling(window,  center=True).min()\n    r = df[\"High\"][df[\"High\"]==h].nlargest(n).values\n    s = df[\"Low\"][df[\"Low\"]==l].nsmallest(n).values\n    return r, s\ndef fetch_clean(sym, period, interval=\"1d\"):\n    d = yf.download(sym, period=period, interval=interval,\n                    auto_adjust=True, progress=False)\n    if isinstance(d.columns, pd.MultiIndex):",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_clean",
+        "kind": 2,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "def fetch_clean(sym, period, interval=\"1d\"):\n    d = yf.download(sym, period=period, interval=interval,\n                    auto_adjust=True, progress=False)\n    if isinstance(d.columns, pd.MultiIndex):\n        d.columns = d.columns.get_level_values(0)\n    d.reset_index(inplace=True)\n    for col in [\"Open\",\"High\",\"Low\",\"Close\",\"Volume\"]:\n        if col in d.columns:\n            d[col] = pd.to_numeric(d[col].squeeze(), errors=\"coerce\")\n    return d.dropna().reset_index(drop=True)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "spike_cfg",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "spike_cfg = dict(showspikes=True, spikemode=\"across\", spikesnap=\"cursor\",\n                 spikecolor=\"#787b86\", spikethickness=1, spikedash=\"dot\")\ntv_layout = dict(paper_bgcolor=\"#131722\", plot_bgcolor=\"#131722\",\n                 font=dict(color=\"#d1d4dc\"), hovermode=\"x unified\",\n                 margin=dict(l=60, r=60, t=50, b=40),\n                 legend=dict(bgcolor=\"#1e222d\", bordercolor=\"#2a2e39\",\n                             borderwidth=1, orientation=\"h\",\n                             yanchor=\"bottom\", y=1.01))\nchart_cfg = dict(scrollZoom=True, displayModeBar=True,\n                 modeBarButtonsToAdd=[\"drawline\",\"drawopenpath\",\"eraseshape\"],",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "tv_layout",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "tv_layout = dict(paper_bgcolor=\"#131722\", plot_bgcolor=\"#131722\",\n                 font=dict(color=\"#d1d4dc\"), hovermode=\"x unified\",\n                 margin=dict(l=60, r=60, t=50, b=40),\n                 legend=dict(bgcolor=\"#1e222d\", bordercolor=\"#2a2e39\",\n                             borderwidth=1, orientation=\"h\",\n                             yanchor=\"bottom\", y=1.01))\nchart_cfg = dict(scrollZoom=True, displayModeBar=True,\n                 modeBarButtonsToAdd=[\"drawline\",\"drawopenpath\",\"eraseshape\"],\n                 modeBarButtonsToRemove=[\"autoScale2d\",\"lasso2d\"],\n                 displaylogo=False)",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "chart_cfg",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "chart_cfg = dict(scrollZoom=True, displayModeBar=True,\n                 modeBarButtonsToAdd=[\"drawline\",\"drawopenpath\",\"eraseshape\"],\n                 modeBarButtonsToRemove=[\"autoScale2d\",\"lasso2d\"],\n                 displaylogo=False)\n# ─────────────────────────────────────────────\n# LIVE LOOP\n# ─────────────────────────────────────────────\nplaceholder = st.empty()\nwhile True:\n    with placeholder.container():",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "placeholder",
+        "kind": 5,
+        "importPath": "app",
+        "description": "app",
+        "peekOfCode": "placeholder = st.empty()\nwhile True:\n    with placeholder.container():\n        try:\n            raw = fetch_clean(stock, period)\n            raw[\"SMA\"]    = raw[\"Close\"].rolling(ma_window).mean()\n            raw[\"EMA12\"]  = raw[\"Close\"].ewm(span=ema_fast,  adjust=False).mean()\n            raw[\"EMA26\"]  = raw[\"Close\"].ewm(span=ema_slow,  adjust=False).mean()\n            raw[\"EMA50\"]  = raw[\"Close\"].ewm(span=50,  adjust=False).mean()\n            raw[\"EMA200\"] = raw[\"Close\"].ewm(span=200, adjust=False).mean()",
+        "detail": "app",
+        "documentation": {}
+    },
+    {
+        "label": "data",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "data = yf.download(\"AAPL\", period=\"7d\", interval=\"5m\")\nvalues = data['Close'].dropna().values.reshape(-1,1)\n# Normalize\nscaler = MinMaxScaler()\nvalues = scaler.fit_transform(values)\n# Create sequences\nX, y = [], []\nwindow = 10\nfor i in range(len(values) - window):\n    X.append(values[i:i+window])",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "values",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "values = data['Close'].dropna().values.reshape(-1,1)\n# Normalize\nscaler = MinMaxScaler()\nvalues = scaler.fit_transform(values)\n# Create sequences\nX, y = [], []\nwindow = 10\nfor i in range(len(values) - window):\n    X.append(values[i:i+window])\n    y.append(values[i+window])",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "scaler",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "scaler = MinMaxScaler()\nvalues = scaler.fit_transform(values)\n# Create sequences\nX, y = [], []\nwindow = 10\nfor i in range(len(values) - window):\n    X.append(values[i:i+window])\n    y.append(values[i+window])\nX, y = np.array(X), np.array(y)\n# Model",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "values",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "values = scaler.fit_transform(values)\n# Create sequences\nX, y = [], []\nwindow = 10\nfor i in range(len(values) - window):\n    X.append(values[i:i+window])\n    y.append(values[i+window])\nX, y = np.array(X), np.array(y)\n# Model\nmodel = Sequential([",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "window",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "window = 10\nfor i in range(len(values) - window):\n    X.append(values[i:i+window])\n    y.append(values[i+window])\nX, y = np.array(X), np.array(y)\n# Model\nmodel = Sequential([\n    LSTM(50, input_shape=(window,1)),\n    Dense(1)\n])",
+        "detail": "train",
+        "documentation": {}
+    },
+    {
+        "label": "model",
+        "kind": 5,
+        "importPath": "train",
+        "description": "train",
+        "peekOfCode": "model = Sequential([\n    LSTM(50, input_shape=(window,1)),\n    Dense(1)\n])\nmodel.compile(optimizer='adam', loss='mse')\n# Train\nmodel.fit(X, y, epochs=10)\n# Save model\nmodel.save(\"model/model.keras\")\nprint(\"✅ Model trained\")",
+        "detail": "train",
+        "documentation": {}
+    }
+]
