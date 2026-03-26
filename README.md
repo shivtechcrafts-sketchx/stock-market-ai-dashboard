@@ -24,6 +24,9 @@
 
 ---
 
+🎥 Live Demo: AI predicting stock trends in real-time: https://drive.google.com/file/d/1AJryxzrN2oh1xKYd3mWqTMw-zzDqQTSz/view?usp=drivesdk
+---
+
 ## 🌟 Project Overview
 
 **LiveStockForecast** ek professional-grade, real-time AI stock trading dashboard hai jo **Streamlit** aur **Yahoo Finance API** ke saath bana hai. Yeh dashboard live price monitoring, AI-powered price predictions, technical analysis, aur paper trading simulator sab kuch ek jagah provide karta hai — bilkul ek pro trading terminal ki tarah.
@@ -159,31 +162,28 @@ META  NVDA   NFLX  AMD   INTC
 
 ---
 
-## 🤝 Contributing
+<div style="text-align:center; padding:20px; border-radius:15px; background:linear-gradient(135deg,#0f2027,#203a43,#2c5364); color:white;">
 
-1. Fork the repo
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+  <h1>👨‍💻 Shiv Kumavat</h1>
 
----
+  <p style="font-size:18px;">
+    🚀 AI & ML Developer <br>
+    📊 Building Smart Dashboards & Predictive Systems
+  </p>
 
-## 📄 License
+  <marquee behavior="scroll" direction="left" scrollamount="6">
+    🔥 AI • Machine Learning • Stock Prediction • Real-Time Systems 🔥
+  </marquee>
 
-Distributed under the MIT License. See `LICENSE` for more information.
+  <br><br>
 
----
-
-<div align="center">
-
-<!-- Footer Wave -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=100&section=footer" width="100%"/>
-
-<p style="color:#787b86">Made with ❤️ using Streamlit + Python</p>
-
-<p>
-  <img src="https://img.shields.io/badge/⭐%20Star%20this%20repo-if%20it%20helped%20you!-FFD700?style=for-the-badge"/>
-</p>
+  <a href="https://github.com/shivtechcrafts-sketch" style="text-decoration:none;">
+    <button style="padding:10px 20px; border:none; border-radius:10px; background:#00c6ff; color:black; font-weight:bold;">
+      Visit GitHub
+    </button>
+  </a>
 
 </div>
+
+
+
